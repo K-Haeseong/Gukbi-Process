@@ -1,0 +1,15 @@
+// 상수 : 한번 저장하면 변경할 수 없는 것
+
+package Day02;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		
+		int num = 100;
+		 	num = 100;
+		System.out.println(num);
+		
+	}
+
+}

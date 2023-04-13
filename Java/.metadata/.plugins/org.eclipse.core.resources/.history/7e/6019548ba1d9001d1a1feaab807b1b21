@@ -1,0 +1,19 @@
+package Day01;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		
+		Map m = new HashMap();
+		
+		m.put(1, "name");
+		m.put(2, "hi");
+		System.out.println(m);
+		
+		
+	}
+
+}

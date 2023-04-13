@@ -1,0 +1,27 @@
+package Day01;
+
+import java.util.HashMap;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		
+		HashMap<K, V> m = new HashMap<K, V> ();
+		m.put(1 , "name");
+		m.get(1);
+		
+		System.out.println("key");
+		
+		
+		System.out.println(100);
+		System.out.println(100.123);
+		
+		System.out.println(100 + 100);
+		System.out.println(100.123 + 100.123);
+		
+		System.out.println("백 : " + 100 );
+		System.out.println("100");
+		
+	}
+
+}
