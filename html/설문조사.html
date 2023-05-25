@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+	<body>
+
+		<form action="회사소개.html" method="get">
+			<table >
+				<tr>
+					<td colspan="2">다음 <span style="background: red; font-weight:bold;">내용에 맞게 입력</span>하시오.</td>
+					<td rowspan="5"><input type="image" src="노래.png" width="200px;" height="150px;"></td>
+				</tr>
+		
+				<tr>
+					<td colspan="2"><label>전공 분야를 입력하세요</label>
+						<select size="1">
+						 	<option value="Software">소프트웨어</option>
+						 	<option value="elec">전자공학</option>
+						 	<option value="manage">경영학</option>
+					 	</select>
+				 	</td>
+				</tr>
+				
+				<tr>
+					<td>이름</td><td><input type="text" placeholder="이름을 입력하세요"></td>
+				</tr>
+				<tr>
+					<td>아이디</td><td><input type="text" placeholder="아이디를 입력하세요"></td>
+				</tr>
+				<tr>
+					<td>비밀번호</td><td><input type="text" placeholder="비밀번호를 입력하세요"></td>
+				</tr>
+			
+				<tr>
+					<td colspan="3">
+						<fieldset>
+							<legend>성별조사</legend>
+							여성<input type="radio" value="man" name="sex">
+							남성<input type="radio" value="woman" name="sex">
+						</fieldset>
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="3">
+						<fieldset>
+							<legend>취미조사</legend>
+							책읽기<input type="checkbox" value="1" name="hobby">
+							공부하기<input type="checkbox" value="2" name="hobby">
+							카페 찾아다니기<input type="checkbox" value="3" name="hobby">
+							컴퓨터게임<input type="checkbox" value="4" name="hobby">
+						</fieldset>
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="3">
+						<fieldset>
+							<legend>하고 싶은 말</legend>
+							<textarea rows=3 cols=70></textarea>
+						</fieldset>	
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<input type="submit" value="완료">
+						<input type="reset" value="다시작성">
+					</td>
+				</tr>
+			</table>
+		</form>
+
+	</body>
+</html>

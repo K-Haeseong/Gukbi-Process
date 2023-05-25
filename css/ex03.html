@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	.box p{color : blue;}	/* 하위선택자 */
+	.box>p{color : green;}	/* 자식 선택자 */
+	.box+div{color : red;}	/* 인접 선택자 */
+	.box02~p{background : yellow;}	/* 형제 선택자 */
+	 
+</style>
+</head>
+
+<body>
+	<div class="box">
+		<p> 1. 하위선택자는 특정 선택자 하위의 모든 요소를 말한다.</p>
+		<div class="box02">
+			<p>2.자식 선택자는 직속 자식 요소를 말한다.</p>
+		</div>
+		<p> 3.다음 내용</p>
+	</div>
+	<div>1.인접 선택자는 바로 뒤에 나오는 하나의 요소</div>
+	<div>1.인접 선택자는 바로 뒤에 나오는 하나의 요소</div>
+	<p>형제 선택자는 같은 계층에 있는 요소에 적용된다.</p>
+	<p>형제 선택자는 같은 계층에 있는 요소에 적용된다.</p>
+	<p>형제 선택자는 같은 계층에 있는 요소에 적용된다.</p>
+	<p>형제 선택자는 같은 계층에 있는 요소에 적용된다.</p>
+	
+</body>
+</html>
