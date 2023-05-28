@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	
+	#wrap {
+	width: 600px;
+	height: 800px;
+	margin: auto;
+	border : 2px solid;
+	}
+	
+	.header {
+	background: red;
+	height:100px;
+	display: flex;
+	justify-content: center;
+	}
+	
+	.header2 {
+	background: yellow;
+	height:100px;
+	display: flex;
+	justify-content: center;
+	}
+	
+	.main {
+	height: 500px;
+	display: flex;
+	}
+	
+	
+	.main div:nth-child(1) {
+	background: green;
+	width: 70%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	}
+	
+	
+	.main div:nth-child(2) {
+	background: aqua;
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	}
+	
+	.footer {
+	background: pink;
+	height: 100px;
+	display: flex;
+	justify-content:center;
+	}
+	
+	#section1 p {
+	width: 400px;
+	height: 30px;
+	border: 2px solid;
+	text-align: center;
+	background: white;
+	font-weight: bold;
+	}
+	
+
+</style>
+
+
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="header">
+			<h1>&#60; header &#62;</h1>
+		</div>
+		<div class="header2">
+			<h2>&#60; nav &#62;</h2>
+		</div>
+		<div class="main">
+			
+			<div id="section1">
+				<h2>&#60; section1 &#62;</h2>
+				<p>&#60; header &#62; </p>	
+				<p>&#60; article &#62; </p>	
+				<p>&#60; footer &#62; </p>	
+			</div>
+			<div><h2>&#60; aside &#62;</h2></div>
+		</div>
+		<div class="footer">
+			<h2>&#60; footer &#62;</h2>
+		</div>
+	</div>
+
+</body>
+</html>

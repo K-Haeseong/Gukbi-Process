@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	
+	#wrap {
+	width: 600px;
+	height: 400px;
+	margin: auto;
+	}
+	
+	.header {
+	background: red;
+	height:100px;
+	display: flex;
+	justify-content: center;
+	border : 2px solid;
+	border-bottom-width: 8px;
+	}
+	
+	.main {
+	height: 250px;
+	display: flex;
+	}
+	
+	.main div:first-child {
+	background: yellow;
+	width: 15%;
+	display: flex;
+	justify-content: center;
+	border-left : 2px solid;
+	border-right : 8px solid;
+	}
+	
+	.main div:nth-child(2) {
+	background: green;
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction: column;
+	}
+	
+	
+	.main div:nth-child(3) {
+	background: yellow;
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	border-left : 8px solid;
+	border-right : 2px solid;
+	}
+	
+	.footer {
+	background: pink;
+	height: 20%;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	font-size: 15pt;
+	font-weight: bold;
+	border: 2px solid;
+	}
+	
+	#section1 p {
+	width: 300px;
+	height: 30px;
+	border: 2px solid;
+	text-align: center;
+	}
+	
+	
+	#section1 p:nth-child(2) {
+	background: red;	
+	}
+	
+	#section1 p:nth-child(3) {
+	background: blue;	
+	}
+	
+	#section1 p:nth-child(4) {
+	background: white;	
+	}
+	
+	
+	
+	
+
+</style>
+
+
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="header">
+			<h1>&#60;header&#62;</h1>
+		</div>
+		<div class="main">
+			<div><h2>nav</h2></div>
+			<div id="section1">
+				<h2>section1</h2>
+				<p>header</p>	
+				<p>article</p>	
+				<p>footer</p>	
+			</div>
+			<div><h2>aside</h2></div>
+		</div>
+		<div class="footer">
+			&#60;footer&#62;
+		</div>
+	</div>
+
+</body>
+</html>
