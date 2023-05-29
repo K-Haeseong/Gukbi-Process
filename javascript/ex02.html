@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>ex02.html<br>
+
+	<script type="text/javascript">
+		let name = "홍길동";	
+		let age = prompt("나이 입력");
+		document.write("이름 : " + name + "<br>");
+		document.write(name+ "님의 나이 : " + age +"<br>");
+		document.write(`${name}님의 나이 : ${age}<br>`); 	/*  백틱( ` )을 지원한다. */
+		console.log(age, typeof(age));
+		console.log(`age : ${typeof age}`)
+		
+		document.write(`만 나이 : ${age-1} 살 입니다.`);
+		
+		let num = Number(age);
+		console.log(`num : ${typeof num}`);
+		console.log(`num : ${typeof num.toString()}`);
+		console.log(`num : ${typeof num+""}`);
+		
+		document.write("<h1 align='center'>안녕하세요</h1>")
+		
+		const n = "홍홍홍";
+		n = "김김김";
+		console.log("n : " + n);
+		
+		
+	</script>
+
+</body>
+</html>
