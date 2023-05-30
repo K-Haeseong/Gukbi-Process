@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		// 3의 배수 구하기
+		
+		/* function input(){
+			const num=prompt("수를 입력 하세요.");
+			return num;
+		}
+		
+		function threeMultiple(value){
+			return (value%3==0) ? "3의배수 O" : "3의배수 X"; 		
+		}
+				
+		function output(value,result){
+			document.write(`${value}는 ${result}`);
+		} */
+		
+		
+		// 화살표 함수로 구현해보기
+		const input = () => {
+			const num = prompt("수를 입력 하세요.");
+			return num;
+		} 
+		
+		const threeMultiple = (value) => {
+			return (value%3==0) ? "3의배수 O" : "3의배수 X"; 
+		}
+		
+		const output = (value,result) => {
+			document.write(`${value}는 ${result}`);
+		}
+		
+		const num = input();
+		const result = threeMultiple(num);
+		output(num, result);
+		
+	
+	</script>
+		
+
+</body>
+</html>

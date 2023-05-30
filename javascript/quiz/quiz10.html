@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+	// 짝수,홀수 구별하기
+	
+	/* function input() {
+		const num = prompt("수를 입력하세요.");
+		return num;
+	}
+	
+	function oddeven(value) {
+		return (value%2==0 ? "짝수" : "홀수");
+	}
+	
+	function output(value, result){
+		document.write(`입력 수 : ${value}, 결과 : ${result}`);	
+	}
+	*/
+	
+	// 화살표 함수로 구현해보기
+	const input = () => {
+		const num = prompt("수를 입력하세요.");
+		return num;
+	}
+	
+	const oddeven = (value) => {
+		return (value%2==0 ? "짝수" : "홀수");
+	}
+	
+	const output = (value, result) => {
+		document.write(`입력 수 : ${value}, 결과 : ${result}`);	
+	}
+	
+	
+	const num = input();
+	const result = oddeven(num);
+	output(num,result);
+	
+	
+	</script>
+		
+
+</body>
+</html>

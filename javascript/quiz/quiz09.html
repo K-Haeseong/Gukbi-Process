@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+	// 가장 큰 수 구하기
+	
+	/* 	function input() {
+		num1 = prompt("수를 입력하세요.");
+		num2 = prompt("수를 입력하세요.");
+		return [num1,num2];
+	}
+	
+	function output(values,result) {
+		document.write(`입력 받은 수  : ${values[0]}, ${values[1]} 결과 : ${result}`);
+	}
+	
+	function MAX(values){
+		if(values[0]>values[1]){
+			return values[0];
+		}else{
+			return values[1];
+		}
+	}
+	
+	let inputNum = input();
+	let result = MAX(inputNum);
+	output(inputNum, result); */
+
+
+	// 화살표 함수로 구현해보기
+	const input = () => {
+		num1 = prompt("수를 입력하세요.");
+		num2 = prompt("수를 입력하세요.");
+		return [num1,num2];
+	}
+	
+	const output = (values,result) =>	{
+		document.write(`입력 받은 수  : ${values[0]}, ${values[1]} 가장 큰 수 : ${result}`);
+	}
+	
+	const MAX = (values) => {
+		if(values[0]>values[1]){
+			return values[0];
+		}else{
+			return values[1];
+		}
+	}
+	
+	let inputNum = input();
+	let result = MAX(inputNum);
+	output(inputNum, result);
+	
+	
+	</script>
+		
+
+</body>
+</html>
