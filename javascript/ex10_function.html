@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		function test01() {
+			let num = 100;
+			// let은 재선언불가, 값 변경시 그냥 변수명만 작성해야함
+			// let num = 200;	이건 불가  
+			// num = 200; 		이건 가능
+			console.log("num : "+ num);
+		}		
+		test01();
+		
+		function test02() {
+			var num2 = 100;
+			// var는 재선언 후 값 변경 가능
+			var num2 = "aaaa";			
+			console.log("n2 : " + num2);
+		}
+		test02();
+		//console.log("밖에 n2 : " + num2);
+		
+		const n1 = 10;
+		const n2 = 20;
+		const sum = sumFunc(n1, n2);
+		function sumFunc(num1, num2){
+			const s = num1 + num2;
+			return s;
+		}
+		document.write(`${n1}+${n2}=${sum}`)
+		
+		function test03(){
+			const num = 95;
+			const txt = "안녕하세요";
+			return num, txt;		// 배열로 받지 않고 그냥 둘다 넘겨서 출력하면 마지막에 있는 것만 출력
+		//	const arr=[num, txt];	// 둘다 출력 하려면 배열로 담아서 사용 
+		//	return arr;
+		}
+		
+		
+		const result = test03();
+		document.write("<hr>"+result); 	
+		document.write("<br>"+result[0]);
+		document.write("<br>"+result[1]);
+			
+	</script>
+</body>
+</html>

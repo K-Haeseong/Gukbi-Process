@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		// 같은 이름으로 함수를 실행하게 되면 마지막에 정의 된 것이 실행된다.
+		// 자바와 같은 메서드 오버로딩은 없다.
+		// 매개변수가 있으면 넣어주고 없으면 안 넣어줌
+		//
+		// undefined	:  '타입' 정해지지 X,	'값'이 정해지지 X
+		// null			:  object 타입, 		'값'이 정해지지 X
+		// 
+		// undefined VS null
+		// undefined === null 비교하면 값은 같지만, 타입이 다르므로 일치 않음. (===은 타입과 값을 비교함)
+		
+		function testFunc01(x,y){
+			console.log("첫번째 함수 실행");
+		}
+		function testFunc01(x,y){
+			console.log("두번째 함수 실행 : " +  x);
+		}
+	
+		testFunc01(10,20);
+		testFunc01(10);
+		testFunc01();
+		
+		function testFunc02(x,y,z){
+			document.write(`매개변수 : ${x},${y},${z}<br>`);
+			let sum;
+			if (z === undefined){
+				sum = x+y;
+			}else{
+				sum = x+y+z;
+			}
+			return sum;
+		}
+		let r1 = testFunc02(2,3);
+		let r2 = testFunc02(4,5,6);
+		document.write("인자 2개 결과 값 :" +r1+"<br>" );
+		document.write("인자 3개 결과 값 :" +r2+"<br>" );
+		
+		
+		// arguments 객체는 함수에 전달된 인수에 해당하는 Array 형태의 객체
+		// "Array 형태"란 arguments가 length 속성과 더불어 0부터 인덱스 된 다른 속성을 가지고 있지만, 
+		// 	Array의 forEach, map과 같은 내장 메서드를 가지고 있지 않다는 뜻입니다.
+		
+		
+		function testFunc03(){
+			console.log(arguments);	
+			console.log(arguments.length);	
+			let sum =0;
+			for(let i = 0; i<arguments.length; i++){
+			sum += arguments[i];
+			}
+			document.write("합 : " + sum + "<br>" );
+		}
+		testFunc03(1,2);
+		testFunc03(1,3,5,7,9);
+		
+		
+		
+	</script>
+</body>
+</html>

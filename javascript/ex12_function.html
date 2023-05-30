@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		
+		// 자바 스크립트 함수
+		// 자바스크립트에서는 함수도 하나의 타입(datatype)이다.
+		// 따라서 함수를 변수에 대입하거나, 함수에 프로퍼티를 지정하는 것도 가능
+		// 함수의 종류 : 일반함수 / 익명함수	
+		
+		
+		
+		// 일반함수	: 일반적으로 다른 언어에서 사용하는 함수와 동일 => 함수 선언식
+		//			: 일반 함수는 자바스크립트가 처음 읽힐 당시에 해석되므로, 함수가 쓰여진 위치가 상관없다. 
+		//			이를 호이스팅이라고 하는데, 호이스팅이란 쉽게 말해 자바스크립트가 처음 읽힐 당시에 모든 객체(변수, 함수)의 선언부를 맨 위로 끌어올리는 것 
+		// 			일반 함수는 함수 전체(함수명, 함수바디)가 통째로 호이스팅 되어 맨 위로 올라가기 때문에 위치 상관없이 읽을 수 있다.
+		
+		
+		// var let const
+		// 변수를 선언할때 초기값을 할당(초기화)하지 않으면 자동으로 undefined값으로 초기화됩니다.
+		// var		: 선언하면 같은 이름으로 중복선언이 가능합니다.
+		//			: var 키워드로 선언된 변수는 함수 레벨 스코프
+		//			: 변수명이 중복된 경우, 지역변수를 우선하여 참조
+		//
+		// const	: 중복선언과 재할당이 불가능하며 선언과 동시에 초기화 해주어야합니다.
+		// let		: 초기화해주지 않아도 재할당이 가능합니다.
+		// 			: let,const 키워드로 선언된 변수는 블록 레벨 스코프
+		
+		
+		/* SayHello(); // "hello!" 가 정상적으로 출력됨.
+		
+		function SayHello(){
+		  console.log("hello!");
+		}
+		
+		SayHello(); // "hello!" 가 정상적으로 출력됨.
+		 */
+		 
+		/* 호이스팅 된 모습
+		function SayHello(){      <- 함수 선언이 먼저 일어나고,
+		  console.log("hello!");
+		}
+		
+		SayHello(); <- 첫 번째 SayHello();
+		SayHello(); <- 두 번재 SayHello();
+		 */ 
+		 
+		 
+		// 익명함수	: 변수에 저장해서 사용 => 함수표현식
+		//			: 함수의 이름이 존재하지 X
+		//			: 함수의 이름 != 변수 
+		// 			: 이 페이지가 읽히게 되면 메모리에 저장 되어 있음
+		// 			: 메모리에 저장X , 실행 끝나면 사라짐
+		
+		
+		function sumFunc02(){} 			
+		let sumFunc = function(x,y){	 
+			alert("익명함수 실행!!");
+			return x+y;
+		}		
+		document.write(sumFunc(10,20));
+		
+		
+		
+		
+		// 즉시 실행함수 	: 초기화 하는 용도로 사용, 빈도 낮음
+		//				: 한 번만 호출되며 다시 호출할 수 없다.
+	
+		let result = (function test(){
+			alert("즉시 실행!!")
+			return "즉시 실행 함수는 초기화 목적으로 사용한다.";
+		})();
+		document.write(result);
+		
+		let name = "홍길동";
+		(function test1(n){
+			alert(n+"님 반갑습니다. 즉시 실행!!")
+		})(name);
+		
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
