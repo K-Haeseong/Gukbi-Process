@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+   #h3 {color: red;}
+
+</style>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+	  	  const clickEvent = () =>{
+	      alert("실행??");
+	      const name = document.getElementById("name");
+	      
+	      console.log(name);
+	      name.value = "안녕하세요";
+	      name.style.background = "red";
+	      
+	      const name2 = document.querySelector("#name2");
+	      console.log(name2);
+	      
+	      name2.value = name.value;
+	      name.value = "";
+	   }
+	
+	</script>
+
+
+
+	<script type="text/javascript">
+	
+	const innerTest = () => {
+	   const txt = document.querySelector(".txt");
+	   console.log(txt);
+	   let msg = "<h3 id = 'h3'>내용 바꾸기</h3>";
+	   txt.innerHTML = msg;
+	   // Element 속성(property) innerHTML 
+	   // => 요소(element) 내에 포함 된  HTML 또는 XML 마크업을 가져오거나 설정합니다.
+	   // 마크업 : "마크(Mark)"로 둘러싸인 언어입니다. "태크(Tag)"로 둘러싸였다고도 표현
+	   
+	}
+	
+	</script>
+
+
+
+
+	<label class ="txt">텍스트 값</label> <br>
+	<span onclick = "innerTest()">클릭</span>
+	
+	<hr>
+	<input type="text" id="name" placeholder="input name"><br>
+	<input type="text" id="name2" placeholder="input name2"><br>
+	<input type="button" value="버튼" onclick="clickEvent()"><br>
+
+
+</body>
+</html>

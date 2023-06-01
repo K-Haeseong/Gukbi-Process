@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// getElementById : 주어진 id 값을 가진 엘리먼트로 접근
+	   const myMousedown = () => {
+	      document.getElementById("span").innerHTML = "마우스 DOWN";
+	   }
+	   
+	   const myMouseup = () => {
+	      document.getElementById("span").innerHTML = "마우스 up";
+	   }
+	   
+	   let cnt = 0;
+	   const myMousemove = () => {
+	      cnt++;
+	      document.getElementById("count1").innerHTML = cnt;
+	   }
+	  
+	   const myMouseover = () => {
+	      cnt++;
+	      document.getElementById("count2").innerHTML = cnt;
+	   }
+	   
+	   const myMouseout = () => {
+	      cnt++;
+	      document.getElementById("count2").innerHTML = "마우스나감";
+	   }
+	</script>
+	
+	<!-- 
+	mousedown 	: 사용자가 해당 element에서 마우스 버튼을 눌렀을 때 발생
+	mouseup		: 사용자가 해당 element에서 눌렀던 마우스 버튼을 떼었을 때 발생
+	mousemove 	: 사용자가 해당 element에서 마우스를 움직였을 때 발생
+	mouseover 	: 사용자가 마우스를 해당 element 바깥에서 안으로 옮겼을 때 발생
+	mouseout  	: 사용자가 마우스를 해당 element 안에서 바깥으로 옮겼을 때 발생
+	
+	mousemove VS onmousemove
+	요약하자면, mousemove은 addEventListener를 사용하여 이벤트 핸들러를 등록하는 방식이고, 
+	onmousemove은 요소의 속성으로 직접 이벤트 핸들러를 할당하는 방식입니다.
+	 -->
+	<div onmousedown="myMousedown()" onmouseup ="myMouseup()">
+	   <span id="span">이벤트 알아보기</span>
+	</div>
+	
+	<hr>
+	
+	<div onmousemove="myMousemove()" 
+		style="background: gray; width: 100px; height: 100px;">
+	   <span id="count1">0</span>
+	</div>
+	
+	<hr>
+	
+	<div onmouseover="myMouseover()" onmouseout="myMouseout()"
+	   style="background: gray; width: 100px; height: 100px;">
+	   <span id="count2">0</span>
+	   
+	</div>
+
+</body>
+</html>

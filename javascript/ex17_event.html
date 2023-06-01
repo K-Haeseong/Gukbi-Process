@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		.img {width : 100px; height: 100px;}
+	</style>
+	<script type="text/javascript">
+		const images = ["images/최근상품01.jpg","images/최근상품02.jpg"];
+		window.onload = () => {
+			const div = document.getElementById("test");
+			let msg="";
+			for(let i = 0; i < images.length ; i++){
+				msg += `<img src="${images[i]}" class="img">`;
+			}
+			div.innerHTML = msg;
+		}
+		
+		/* window.onload = () ={
+		} */
+		//초기화 목적 
+	</script>
+</head>
+<body>
+	<div id ="test"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
