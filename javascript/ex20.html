@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	const data = [111,222,333];
+	function printArr(item, index){
+		document.write(`배열 데이터 ${index} = ${item}<br>`);
+	}
+	
+	// forEach() : 주어진 함수를 배열 요소 각각에 대해 실행, return 사용 X
+	data.forEach(printArr);
+	
+	document.write(`=======foreach======<br>`);
+	data.forEach((item,index) => {
+		document.write(`배열 데이터 ${index} = ${item}<br>`);
+	}); // printArr 내용을 그냥 집어 넣은 것 뿐임
+	
+	
+	
+	const mapArr = (value) => {
+		return `<b style="color:red;">${value}</b>`;
+	}
+	
+	const mapArr2 = (value) => {
+		return `<b style="color:blue;">${value}</b>`;
+	}
+	
+	// map() : 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환, return 사용 O
+	const mapData = data.map(mapArr);
+	const mapData2 = data.map((value) => {
+		return `<b style="color:blue;">${value}</b>`;
+	});
+	document.write(mapData);	
+	document.write(mapData2);
+	
+	
+	
+	
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

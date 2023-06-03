@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	let kdata = ["서울","부산"];
+	document.write("기본 배열 : " +kdata+"<br>");
+	kdata.push("인천","세종");
+	document.write("push 배열 : " + kdata + "<br>");
+	
+	kdata.pop();
+	document.write("pop 배열 : " + kdata+ "<br>");
+	
+	kdata.unshift("111","222"); // 앞에 데이터 추가
+	document.write("unshift 배열 : " + kdata+ "<br>");
+	
+	
+	kdata.shift(); // 앞에서 데이터 빼기
+	document.write("shift 배열 : " + kdata + "<br>");
+	
+	d = kdata.concat("추가","데이터"); // 해당 데이터에 데이터 추가X, 
+									// 추가되는 데이터와 원래 것을 합쳐서 새로운 것을 만들어줌(배열 추가해서 사용)
+	document.write("concat 배열 : " + d + "<br>");
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

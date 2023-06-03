@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const city = ["서울","부산","인천"];
+		const printArr = () => {
+			for(let i =0; i<city.length; i++){
+				document.write(`배열 데이터 ${i} = ${city[i]}<br>`);
+			}
+		}
+		printArr();
+		city[3] = "대구";
+		document.write(`<hr>${city}<br>`);
+		
+		
+		// join : 배열 사이를 어떤 것으로 채우겠다. 배열은 object 타입이지만 join은 문자열 형식
+		const str = city.join("/");
+		document.write("str : "+str+"<br>");
+		document.write("str type : "+ typeof str +"<br>");
+		document.write("city type : "+ typeof city +"<br>");
+		
+		document.write("str.split : " + str.split("/")+"<br>");
+		document.write("str.split : " + typeof str.split("/")+"<br>");
+		
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

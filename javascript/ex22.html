@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var userInfo = [
+			{id : "aaa", name : "홍길동", age : 20},
+			{"id" : "bbb", "name" : "김개똥", "age" : 30},
+			{id : "ccc", name : "김둘리", age : 40},
+		];
+		
+		// 페이지가 읽히면 window.onload 메서드 자동으로 실행
+		window.onload = () => {
+				const div = document.querySelector(".test");
+				let msg = `아이디 : ${userInfo[0].id}<br>
+							이름 : ${userInfo[0].name}<br>
+							나이 : ${userInfo[0].age}<br>`;
+					div.innerHTML = msg;
+					
+					const id = "bbb";
+					const result = userInfo.filter((d) => d.id === id);
+					console.log(result);
+					console.log("=======================");
+					
+					for(let i = 0; i < userInfo.length; i++){
+						console.log(userInfo[i].age -1);
+					}
+					console.log("=======================");
+					
+					userInfo.forEach((d) => {
+						console.log(d.age-1);
+					});
+					console.log("=======================");
+					
+					const ddd = userInfo.map( (d2) => { 
+						d2.age = d2.age-1
+						return d2;
+					});
+					console.log(ddd);
+					console.log("=========== map사용 ============");
+					
+					// 자바의 일반적인 for문과 동일
+					for(let user of userInfo){
+						console.log(user);
+					}
+				}
+	</script>
+	
+	<div class="test"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
