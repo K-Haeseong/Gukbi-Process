@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function test(){
+			//alert("test실행")
+			const fo = document.getElementById("fo");
+			console.log( fo );
+			console.log( fo.pwd1.value );
+			
+			const pwd2 = document.getElementById("pwd2");
+			if(fo.pwd1.value === pwd2.value){
+				alert("비밀번호 일치");
+				fo.submit(); // 일치하니까 여기서 submit 호출
+			}else{
+				alert("잘못 입력!!!");
+			}
+			// 회원가입 할 때 필수항목 작성 하게 만들고 작성 X면 해당 입력창으로 커서 이동 시키키로 응용 가능
+		}
+		
+		function test1() {
+			location.href='http://www.naver.com'
+		}
+	</script>
+	
+	<form id="fo" action="ex29.html">
+		<input type="text" id = "pwd1"><br>
+		<input type="text" id = "pwd2"><br>
+		<input type="button" value="전송" onclick="test()"><br>
+		<!-- submit 무조건 action태그에 정의 경로로 이동하게 되어있음 
+			그러므로 뭔가 확인 후 새창으로 이동하려면 submit이 아니라 button 사용 
+			button은 action과 무관함-->
+	</form>
+	
+	<button type="button" onclick="location.href='ex29.html'">이동</button>
+	<button type="button" onclick="test1()">이동</button>
+	
+	
+</body>
+</html>

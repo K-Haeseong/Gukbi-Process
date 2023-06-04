@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	function myFocus(){
+		document.getElementById("pwd").focus();
+		const txt =	document.getElementById("txt");
+		document.getElementById("copy").value = txt.value;
+	}
+	const test = ( t ) =>{
+		console.log( document.getElementById("txt") );
+		console.log( t );
+		document.getElementById("copy").value = t.value;
+	}
+	
+	
+	</script>
+	
+	<input type="text" id="txt" oninput="test(this)"><br> 
+	<!-- oninput : 해당아이디는 사용가능/불가, 이미 검색했던 내용 뿌려줄 때  -->
+	<input type="text" id="pwd"><br>
+	<input type="text" id="copy"><br>
+	<input type="button" onclick="myFocus()" value="클릭"><br>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var img;
+	function add() {
+		img = document.createElement("img");
+		img.src = "images/최근상품01.jpg"
+		img.width = "100";
+		img.style.height="100px";
+		//imgsetAttribute("width",100);
+		//imgsetAttribute("height",100);
+		//imgsetAttribute("src","이미지 경로");
+		document.getElementById("test").appendChild(img); // 계속 추가 하겠다.
+		//document.getElementById("test").innerHTML = img;	// 하나만 추가 하겠다.
+	}
+	
+	const remove = () => {
+		let items = document.querySelector("#test");
+		console.log(items.childNodes);
+		//items.removeChild(items.childNodes[3]);
+		items.removeChild(items.childNodes[5]);
+		//document.querySelector("img").remove();
+		
+	}
+	
+	</script>
+	<p id="test">
+		<b>aaa</b>
+		<span>bbb</span>
+	</p>	
+	<a href="#" onclick="add()">[이미지 추가]</a>
+	<a href="#" onclick="remove()">[이미지 삭제]</a>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		const pwdChk = ( t ) => {
+			const pwd1 = document.getElemntById("pwd1");
+			console.log(pwd1.value+", "+ t.value);
+			document.getElementById("label").innerHTML="비번 일치";
+			pwd1.focus();
+		}
+		
+		//this가 여기로 넘어온다.
+		 function img( i ) {
+			var file = i.files[0];
+			if( file != ""){
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = (e) => {
+					console.log(e);
+					console.log(e.target);
+					console.log(e.target.result);
+					document.getElementById("preview").src = e.target.result;
+				}
+			}
+		}
+		
+	</script>
+	
+		<input type="file" onchange="img(this)">
+		<img id = "preview" src="#" width="100" height="100" alt="없음">
+		<hr>
+		<input type="text" id="pwd1"><br>
+		<input type="text" id="pwd2" onchange="pwdChk(this)">
+		<label id = "label"></label>
+		<br>
+		<input type="text"><br>
+	
+</body>
+</html>
