@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+		var userInfo = [
+			{id : "aaa", name : "홍길동", age : 20},
+			{id : "bbb", name : "김개똥", age : 30},
+			{id : "ccc", name : "김둘리", age : 40},
+		];
+	
+	
+		const allUser = () => {
+		let table ="";
+		table += "<table = border='1'>";
+		table += "<tr><th>아이디</th> <th>이름</th> <th>나이</th></tr>";
+		for(let i = 0; i < userInfo.length; i++){
+				table += "<tr>"
+				table += 
+					`<td>${userInfo[i].id}</td>
+					<td onclick = "info('${userInfo[i].id}')">${userInfo[i].name}</td>
+					<td>${userInfo[i].age}</td>`;
+				table += "</tr>"
+			}
+			table += "</table>";
+			document.querySelector("#table").innerHTML = table;
+		};
+		
+		
+		const info = ( id ) => {
+			const user = userInfo.filter( (value)=>
+			(id === value.id) ? value : "")[0];
+			console.log( user );
+			const msg = `<b>아이디</b> : ${user.id}<br>
+				<b>이름</b> : ${user.name}<br>
+				<b>나이</b> : ${user.age}<br>`
+			document.getElementById("table").innerHTML = msg;
+		}
+		
+		
+		const getUser = () => {
+			const u_id = document.querySelector("#u_id").value; // 입력창의 값을 가져옴
+			console.log(u_id);
+			let table ="";
+			const user = userInfo.filter((value,index) => u_id === value.id ? value : "")[0];
+			//console.log(user);
+			table += "<table = border='1'>";
+			table += "<tr> <th>아이디</th> <th>이름</th> <th>나이</th> </tr>";
+				table += "<tr>"
+				table += 
+					`<td>${user.id}</td>
+					<td>${user.name}</td>
+					<td>${user.age}</td>`;
+				table += "</tr>"
+				table += "</table>";
+				document.querySelector("#table").innerHTML = table;
+			};
+		
+			const userDelete = () => {
+				const u_id = document.querySelector("#del_id").value;
+				userInfo = userInfo.filter((value,index) => {
+					if(u_id !== value.id){
+						return userInfo[index];
+					}
+				});
+			allUser();
+			}
+			
+	</script>
+		
+		
+	<div id="table">목록을 보여 줍니다</div>
+	<hr>
+	<button type="button" onclick="allUser()">모든 회원 보기</button>
+	<hr>
+	<input type="text" id="u_id" placeholder="input id">
+	<br>
+	<button type="button" onclick="getUser()">특정 회원 조회</button>
+	<hr>
+	<input type="text" id="del_id" placeholder="input id">
+	<br>
+	<button type="button" onclick="userDelete()">특정 회원 삭제</button>
+</body>
+	
+
+</html>
